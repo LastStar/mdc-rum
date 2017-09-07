@@ -8,7 +8,7 @@ Not complete, just what I needed so far. Feel free to PR some more.
 
 ## Usage
 
-Add to dependencies: [laststar/mdc-rum "0.1.0-SNAPSHOT"].
+Add to dependencies: `[laststar/mdc-rum "0.1.0-SNAPSHOT"]`.
 
 For css styles you need to add link to [MDC][mdcw] styles:
 
@@ -44,7 +44,11 @@ by the components.
 
 ## Discussion
 
-I definitely know about other libraries, which solve similar problem like [https://github.com/roman0/rum-mdc]. But I am not sure I need to create [Rum][rum] component for every element a reimplement all the [MDC][mdcw] JavaScript my self. 
+I definitely know about other libraries, which solve similar problem like
+[rum-mdc][rumm]. But I am not sure I need to create [Rum][rum] component for
+every element and reimplement all the [MDC][mdcw] JavaScript myself.
+
+Still probably these other libraries are better for you :-).
 
 ## License
 
@@ -57,3 +61,4 @@ your option) any later version.
 [cljs]: https://https://github.com/clojure/clojurescript
 [mdcw]: https://github.com/material-components/material-components-web
 [rum]: https://github.com/tonsky/rum
+[rumm]: https://github.com/roman0/rum-mdc
