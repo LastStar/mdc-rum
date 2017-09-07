@@ -14,7 +14,11 @@
 
 (def ^:const layout-grid :div.mdc-layout-grid)
 
+(def ^:const layout-cell-1 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-1)
+
 (def ^:const layout-cell-2 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-2)
+
+(def ^:const layout-cell-3 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-3)
 
 (def ^:const layout-cell-4 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-4)
 
@@ -26,7 +30,11 @@
 
 (def ^:const layout-cell-8 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8)
 
+(def ^:const layout-cell-9 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-9)
+
 (def ^:const layout-cell-10 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-10)
+
+(def ^:const layout-cell-11 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-11)
 
 (def ^:const layout-cell-12 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-12)
 
@@ -119,3 +127,5 @@
 (def ^:const typo-body-1 :p.mdc-typography--body1)
 
 (def ^:const typo-body-2 :p.mdc-typography--body2)
+
+(def ^:const primary-button :button.mdc-button.mdc-button--raised.mdc-button--primary.mdc-button--accent)
