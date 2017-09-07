@@ -1,4 +1,4 @@
-(defproject laststar/mdc-rum "0.1.0-SNAPSHOT"
+(defproject laststar/mdc-rum "0.1.0"
   :description "ClojureScript library for Material Design Components in Rum"
   :url "http://laststar.github.io/mdc-rum"
   :license {:name "Eclipse Public License"
