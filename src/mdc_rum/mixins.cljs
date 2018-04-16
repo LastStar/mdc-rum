@@ -1,10 +1,11 @@
 (ns mdc-rum.mixins
-  (:require [rum.core :as rum]))
+  (:require [rum.core :as rum]
+            [mdc-rum.core :as mdc]))
 
 
-(def attach-textfield
+(def attach-text-field
   {:did-mount (fn [state]
-                (-> state rum/dom-node js/mdc.textfield.MDCTextfield.attachTo)
+                (-> state rum/dom-node js/mdc.textField.MDCTextField.attachTo)
                 state)})
 
 

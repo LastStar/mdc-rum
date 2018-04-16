@@ -8,7 +8,9 @@ Not complete, just what I needed so far. Feel free to PR some more.
 
 ## Usage
 
-Add to dependencies: `[laststar/mdc-rum "0.1.0-SNAPSHOT"]`.
+Add to dependencies: `[laststar/mdc-rum "0.2.0"]`.
+
+Clone this repository, and in it run `lein install`.
 
 For css styles you need to add link to [MDC][mdcw] styles:
 
@@ -58,7 +60,7 @@ Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
 
 
-[cljs]: https://https://github.com/clojure/clojurescript
+[cljs]: https://github.com/clojure/clojurescript
 [mdcw]: https://github.com/material-components/material-components-web
 [rum]: https://github.com/tonsky/rum
 [rumm]: https://github.com/roman0/rum-mdc

@@ -14,6 +14,8 @@
 
 (def ^:const layout-grid :div.mdc-layout-grid)
 
+(def ^:const layout-grid-inner :div.mdc-layout-grid__inner)
+
 (def ^:const layout-cell-1 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-1)
 
 (def ^:const layout-cell-2 :div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-2)
@@ -64,7 +66,7 @@
 
 (def ^:const option :option.mdc-list-item)
 
-(def ^:const pw-validation-message :p.mdc-textfield-helptext.mdc-textfield-helptext--persistent.mdc-textfield-helptext--validation-msg)
+(def ^:const pw-validation-message :p.mdc-text-field-helptext.mdc-text-field-helptext--persistent.mdc-text-field-helptext--validation-msg)
 
 (def ^:const drawer :nav.mdc-permanent-drawer)
 
@@ -127,5 +129,3 @@
 (def ^:const typo-body-1 :p.mdc-typography--body1)
 
 (def ^:const typo-body-2 :p.mdc-typography--body2)
-
-(def ^:const primary-button :button.mdc-button.mdc-button--raised.mdc-button--primary.mdc-button--accent)

@@ -3,25 +3,25 @@
             [mdc-rum.core :as mdc]
             [mdc-rum.mixins :as mixins]))
 
-(rum/defc textfield < mixins/attach-textfield rum/static
+(rum/defc text-field < mixins/attach-text-field rum/static
   [opts input-name label]
-  (let [id (keyword (str (name input-name) "-input"))]
-    [:div.mdc-textfield
-     [:input.mdc-textfield__input (merge {:id id :name input-name} opts)]
-     [:label.mdc-textfield__label {:for input-name} label]]))
+  (let [id    (keyword (str (name input-name) "-input"))
+        value (:value opts)]
+    [:div.mdc-text-field
+     [:input.mdc-text-field__input (merge {:id id :name input-name} opts)]
+     [:label.mdc-text-field__label
+      {:for   input-name
+       :class (when (and value (not-empty value))
+                "mdc-text-field__label--float-above")}
+      label]]))
 
 
-(rum/defc textfield-multiline < mixins/attach-textfield rum/static
+(rum/defc textarea < mixins/attach-text-field rum/static
   [opts input-name label]
   (let [id (keyword (str (name input-name) "-multiline"))]
-    [:div.mdc-textfield.mdc-textfield--multiline
-      [:textarea.mdc-textfield__input (merge {:id id :name input-name :rows 12 :cols 60} opts)]
-      [:label.mdc-textfield__label {:for input-name} label]]))
-
-
-(rum/defc dialog-primary-button < mixins/attach-ripple rum/static
-  [opts label]
-  [:button.mdc-button.mdc-button__dialog__footer_button.mdc-button--primary.mdc-button--accent opts label])
+    [:div.mdc-text-field.mdc-text-field--textarea
+      [:textarea.mdc-text-field__input (merge {:id id :name input-name :rows 12 :cols 60} opts)]
+      [:label.mdc-text-field__label {:for input-name} label]]))
 
 
 (rum/defc dialog-button < mixins/attach-ripple rum/static
@@ -29,22 +29,21 @@
   [:button.mdc-button.mdc-button__dialog__footer_button opts label])
 
 
-(rum/defc primary-button < mixins/attach-ripple rum/static
-  [opts label]
-  [:button.mdc-button.mdc-button--primary opts label])
-
-
 (rum/defc button < mixins/attach-ripple rum/static
   [opts label]
   [:button.mdc-button opts label])
 
+(rum/defc secondary-button < mixins/attach-ripple rum/static
+  [opts label]
+  [:button.mdc-button.mdc-theme--secondary opts label])
+
+(rum/defc raised-button < mixins/attach-ripple rum/static
+  [opts label]
+  [:button.mdc-button.mdc-button--raised opts label])
+
 (rum/defc link-button < mixins/attach-ripple rum/static
   [opts label]
   [:a.mdc-button opts label])
-
-(rum/defc primary-link-button < mixins/attach-ripple rum/static
-  [opts label]
-  [:a.mdc-button.mdc-button--primary opts label])
 
 (rum/defc dense-link-button < mixins/attach-ripple rum/static
   [opts label]
@@ -54,13 +53,9 @@
   [opts label]
   [:button.mdc-button.mdc-button--dense opts label])
 
-(rum/defc dense-primary-button < mixins/attach-ripple rum/static
-  [opts label]
-  [:button.mdc-button.mdc-button--dense.mdc-button--primary opts label])
-
 (rum/defc card-button < mixins/attach-ripple rum/static
   [opts label]
-  [:button.mdc-button.mdc-button--compact.mdc-card__action.mdc-button--primary opts label])
+  [:button.mdc-button.mdc-button--compact.mdc-card__action opts label])
 
 (rum/defc card-link < mixins/attach-ripple rum/static
   [opts label]
@@ -70,10 +65,10 @@
   [opts label]
   [mdc/icon-link opts label])
 
-(rum/defcc checkbox
+(rum/defc checkbox
   [opts]
   [:div.mdc-checkbox
-   [:input.mdc-checkbox__native-control opts]
+   [:input.mdc-checkbox__native-control (merge {:type "checkbox"} opts)]
    [:div.mdc-checkbox__background
     [:svg.mdc-checkbox__checkmark
      {:view-box "0 0 24 24"}
